@@ -15,4 +15,8 @@ public class AC extends Device {
 		return ambientTemperature;
 	}
 
+	public int getTargetTemperature() {
+		return targetTemperature;
+	}
+
 }

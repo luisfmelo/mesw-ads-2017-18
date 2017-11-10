@@ -1,7 +1,5 @@
 package hot;
 
-import hot.devices.Lamp;
-
 public class DeviceFactory {
 
 	public static Device create(String deviceType) {

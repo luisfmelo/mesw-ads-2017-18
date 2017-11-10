@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 public class HoTapp {
@@ -53,10 +52,10 @@ public class HoTapp {
 		JPanel panel_1 = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.WEST);
 		
-		JLabel label1 = new JLabel("1 OFF");
+		JLabel label1 = new JLabel("L1 OFF");
 		panel_1.add(label1);
 		
-		JLabel label2 = new JLabel("2 OFF");
+		JLabel label2 = new JLabel("L2 OFF");
 		panel_1.add(label2);
 
 		JButton btnNewButton_1 = new JButton("Lamp 1");
@@ -68,17 +67,31 @@ public class HoTapp {
 		
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Device d = HoT.getInstance().getDevice("L1");
-				if (d.isOn()) {
-					label1.setText("L1 OFF");
-					d.turnOff();
-				} else {
+				Device d1 = HoT.getInstance().getDevice("L1");				
+				if (d1.isOn()) {
 					label1.setText("L1 ON");
-					d.turnOn();
+					d1.turnOff();
+				} else {
+					label1.setText("L1 OFF");
+					d1.turnOn();
 				}
-				
 			}
 		});
+		
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Device d2 = HoT.getInstance().getDevice("L2");				
+				if (d2.isOn()) {
+					label2.setText("L2 ON");
+					d2.turnOff();
+				} else {
+					label2.setText("L2 OFF");
+					d2.turnOn();
+				}
+			}
+		});
+		
+		
 
 		frame.getContentPane().add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new GridLayout(0, 1, 0, 0));
