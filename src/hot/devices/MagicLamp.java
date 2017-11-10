@@ -1,7 +1,7 @@
 package hot.devices;
 
-import hot.Device;
+import hot.BasicDevice;
 
-public class MagicLamp extends Device {
+public class MagicLamp extends BasicDevice {
 
 }

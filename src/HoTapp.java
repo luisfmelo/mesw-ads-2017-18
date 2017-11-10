@@ -90,8 +90,6 @@ public class HoTapp {
 				}
 			}
 		});
-		
-		
 
 		frame.getContentPane().add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new GridLayout(0, 1, 0, 0));

@@ -2,21 +2,19 @@ package hot.devices;
 
 import java.util.ArrayList;
 
-import hot.Device;
+import hot.BasicDevice;
 
-public class Switch extends Device {
+public class Switch extends BasicDevice {
 
-	ArrayList<Device> devices = new ArrayList<Device>();
+	ArrayList<BasicDevice> devices = new ArrayList<BasicDevice>();
 	
-	public void connectTo(Device device) {
+	public void connectTo(BasicDevice device) {
 		devices.add(device);
 	}
 	
 	public void turnOn() {
-		for (Device device: devices) {
+		for (BasicDevice device: devices) {
 			device.turnOn();
 		}
 	}
-
-
 }

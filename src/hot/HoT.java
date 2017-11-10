@@ -6,6 +6,7 @@ import java.util.Map;
 import hot.devices.AC;
 import hot.devices.DimmableLamp;
 import hot.devices.Switch;
+import hot.devices.Lamp;
 
 public class HoT {
 
@@ -19,8 +20,8 @@ public class HoT {
 
 	private void init() {
 		// setup
-		Device l1 = DeviceFactory.create("Lamp"); registry.put("L1", l1);
-		Device l2 = DeviceFactory.create("Lamp"); registry.put("L2", l2);
+		BasicDevice l1 = (Lamp) DeviceFactory.create("Lamp"); registry.put("L1", l1);
+		BasicDevice l2 = (Lamp) DeviceFactory.create("Lamp"); registry.put("L2", l2);
 		DimmableLamp l3 = (DimmableLamp) DeviceFactory.create("DimmableLamp");
 
 		Switch suitch = new Switch(); 
